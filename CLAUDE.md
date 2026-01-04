@@ -65,6 +65,10 @@ Claude handles all git operations with these rules:
 3. **Show status** - before proposing commit, show `git status` and `git diff --stat`
 4. **Never use `--no-verify`** - if pre-commit hooks fail, discuss the issue with user and find a proper fix
 5. **Fix problems, don't bypass them** - all commit/hook issues must be resolved canonically, not worked around
+6. **Update documentation BEFORE committing** - when completing a task group:
+   - First update status in phase document (docs/phases/)
+   - Then show git status with ALL changes (code + docs)
+   - Then propose commit that includes everything
 
 ### Pre-commit Workflow (Windows)
 

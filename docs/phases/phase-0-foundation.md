@@ -648,11 +648,11 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 5.1 | Add DVC to dependencies | Claude | | Update pyproject.toml |
-| 5.2 | Initialize DVC | User | | `poetry run dvc init` |
-| 5.3 | Create `data/` folder structure | Claude | | raw/, processed/, external/ |
-| 5.4 | Create `data/README.md` | Claude | | How to get data |
-| 5.5 | Configure DVC remote | User | | When we have data (later) |
+| 5.1 | Add DVC to dependencies | Claude | ✅ Done | Already in pyproject.toml |
+| 5.2 | Initialize DVC | User | ✅ Done | `dvc init` completed |
+| 5.3 | Create `data/` folder structure | Claude | ✅ Done | raw/, processed/, external/ |
+| 5.4 | Create `data/README.md` | Claude | ✅ Done | Data organization documented |
+| 5.5 | Configure DVC remote | User | ⏳ Later | When we have data to track |
 
 ---
 
@@ -660,10 +660,11 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 6.1 | Create `.github/workflows/ci.yml` | Claude | | GitHub Actions config |
-| 6.2 | Push to GitHub | User | | `git push origin init` |
-| 6.3 | Verify CI runs | User | | Check GitHub Actions tab |
-| 6.4 | Fix any CI failures | Together | | Iterate until green |
+| 6.1 | Create `.github/workflows/ci.yml` | Claude | ✅ Done | Lint, test, docker jobs |
+| 6.2 | Create basic tests | Claude | ✅ Done | conftest.py + test_polyvoice.py |
+| 6.3 | Push to GitHub | User | ⏳ Pending | After commit |
+| 6.4 | Verify CI runs | User | ⏳ Pending | Check GitHub Actions tab |
+| 6.5 | Fix any CI failures | Together | ⏳ Pending | Iterate until green |
 
 ---
 
