@@ -1,6 +1,6 @@
 # Phase 0: Foundation & Infrastructure
 
-> **Status**: Not Started
+> **Status**: ✅ Completed
 > **Prerequisites**: None (this is the first phase)
 
 ---
@@ -684,11 +684,11 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 8.1 | Create `src/polyvoice/__init__.py` | Claude | | Package init |
-| 8.2 | Create placeholder modules | Claude | | asr/, tts/, etc. with `__init__.py` |
-| 8.3 | Create sample test | Claude | | `tests/test_sample.py` |
-| 8.4 | Run tests | User | | `poetry run pytest` |
-| 8.5 | Create and push init branch | User | | `git checkout -b init && git push` |
+| 8.1 | Create `src/polyvoice/__init__.py` | Claude | ✅ Done | Created earlier |
+| 8.2 | Create placeholder modules | Claude | ✅ Done | asr/, tts/, orchestrator/, pronunciation/, language_id/, api/, common/ |
+| 8.3 | Create sample test | Claude | ✅ Done | tests/unit/test_polyvoice.py |
+| 8.4 | Run tests | User | ✅ Done | 2 tests passed |
+| 8.5 | Create and push init branch | User | ✅ Done | Working on init branch |
 
 ---
 
