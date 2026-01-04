@@ -595,12 +595,12 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 1.1 | Install Python 3.11+ | User | | Check: `python --version` |
-| 1.2 | Install Poetry | User | | `pip install poetry` or official installer |
-| 1.3 | Install Docker Desktop | User | | Download from docker.com, enable WSL2 |
-| 1.4 | Install Git (if not present) | User | | Check: `git --version` |
-| 1.5 | Install VS Code (or preferred IDE) | User | | With Python extension |
-| 1.6 | Verify all tools work | User | | Run verification commands |
+| 1.1 | Install Python 3.11+ | User | ✅ Done | Check: `python --version` |
+| 1.2 | Install Poetry | User | ✅ Done | Official installer, added to PATH |
+| 1.3 | Install Docker Desktop | User | ✅ Done | Download from docker.com, enable WSL2 |
+| 1.4 | Install Git (if not present) | User | ✅ Done | Check: `git --version` |
+| 1.5 | Install VS Code (or preferred IDE) | User | ✅ Done | With Python extension |
+| 1.6 | Verify all tools work | User | ✅ Done | poetry --version works |
 
 ---
 
