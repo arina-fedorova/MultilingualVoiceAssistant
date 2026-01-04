@@ -63,6 +63,16 @@ Claude handles all git operations with these rules:
 1. **Never commit without user approval** - always show what will be committed and proposed message first
 2. **Always push after commit** - every commit should be pushed immediately
 3. **Show status** - before proposing commit, show `git status` and `git diff --stat`
+4. **Never use `--no-verify`** - if pre-commit hooks fail, discuss the issue with user and find a proper fix
+5. **Fix problems, don't bypass them** - all commit/hook issues must be resolved canonically, not worked around
+
+### Pre-commit Workflow (Windows)
+
+Due to Cyrillic username path issues on Windows, git hooks are disabled. Instead:
+
+1. **Before committing**, user runs: `poetry run pre-commit run --all-files`
+2. **CI on GitHub** catches any issues that slip through
+3. This is documented as a known Windows limitation
 
 ---
 
