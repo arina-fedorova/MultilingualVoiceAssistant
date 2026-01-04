@@ -622,13 +622,13 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 3.1 | Add dev dependencies (ruff, mypy, pytest) | Claude | | Update pyproject.toml |
-| 3.2 | Create `ruff.toml` config | Claude | | Linting rules |
-| 3.3 | Create `mypy.ini` config (strict) | Claude | | Type checking rules |
-| 3.4 | Create `pytest.ini` config | Claude | | Test configuration |
-| 3.5 | Create `.pre-commit-config.yaml` | Claude | | Pre-commit hooks |
-| 3.6 | Install pre-commit | User | | `poetry run pre-commit install` |
-| 3.7 | Run pre-commit on all files | User | | `poetry run pre-commit run --all-files` |
+| 3.1 | Add dev dependencies (ruff, mypy, pytest) | Claude | ✅ Done | In pyproject.toml |
+| 3.2 | Create `ruff.toml` config | Claude | ✅ Done | Config in pyproject.toml |
+| 3.3 | Create `mypy.ini` config (strict) | Claude | ✅ Done | Config in pyproject.toml |
+| 3.4 | Create `pytest.ini` config | Claude | ✅ Done | Config in pyproject.toml |
+| 3.5 | Create `.pre-commit-config.yaml` | Claude | ✅ Done | ruff, mypy, nbstripout, etc. |
+| 3.6 | Install pre-commit | User | ✅ Done | `poetry run pre-commit install` |
+| 3.7 | Run pre-commit on all files | User | ✅ Done | All hooks passed |
 
 ---
 
