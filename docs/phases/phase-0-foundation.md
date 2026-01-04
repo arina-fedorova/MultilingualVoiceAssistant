@@ -672,11 +672,11 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 7.1 | Add Jupyter to dependencies | Claude | | Update pyproject.toml |
-| 7.2 | Configure nbstripout | Claude | | Add to pre-commit |
-| 7.3 | Create `scripts/export_notebooks.py` | Claude | | HTML export script |
-| 7.4 | Create sample notebook | Claude | | Verify setup works |
-| 7.5 | Test notebook workflow | User | | Open, run, commit |
+| 7.1 | Add Jupyter to dependencies | Claude | ✅ Done | Already in pyproject.toml |
+| 7.2 | Configure nbstripout | Claude | ✅ Done | Already in pre-commit |
+| 7.3 | Create `scripts/export_notebooks.py` | Claude | ✅ Done | Exports notebooks to HTML |
+| 7.4 | Create sample notebook | Claude | ✅ Done | 00_setup_test.ipynb |
+| 7.5 | Test notebook workflow | User | ✅ Done | Export to HTML works |
 
 ---
 

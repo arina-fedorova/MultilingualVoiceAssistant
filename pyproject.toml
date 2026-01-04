@@ -26,6 +26,7 @@ jupyterlab = "^4.3"
 nbstripout = "^0.8"
 # DVC
 dvc = "^3.56"
+nbconvert = "^7.16.6"
 
 [build-system]
 requires = ["poetry-core"]
