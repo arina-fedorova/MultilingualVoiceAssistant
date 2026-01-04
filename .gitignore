@@ -31,7 +31,7 @@ venv/
 ENV/
 
 # Poetry
-poetry.lock
+# poetry.lock - KEEP in git for reproducible builds
 
 # IDE
 .idea/

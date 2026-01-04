@@ -608,13 +608,13 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 2.1 | Create folder structure | Claude | | All folders as defined |
-| 2.2 | Initialize Poetry (`pyproject.toml`) | Claude | | With project metadata |
-| 2.3 | Create `.gitignore` | Claude | | Python + DS + DVC patterns |
-| 2.4 | Create initial `README.md` | Claude | | Project description |
-| 2.5 | Update `CLAUDE.md` with final structure | Claude | | |
-| 2.6 | Run `poetry install` | User | | Creates virtual env |
-| 2.7 | Verify: `poetry run python --version` | User | | Check it works |
+| 2.1 | Create folder structure | Claude | ✅ Done | All folders created |
+| 2.2 | Initialize Poetry (`pyproject.toml`) | Claude | ✅ Done | With all dev dependencies |
+| 2.3 | Create `.gitignore` | Claude | ✅ Done | Python + DS + DVC patterns |
+| 2.4 | Create initial `README.md` | Claude | ✅ Done | Project description |
+| 2.5 | Update `CLAUDE.md` with final structure | Claude | ✅ Done | Git rules added |
+| 2.6 | Run `poetry install` | User | ✅ Done | Virtual env created |
+| 2.7 | Verify: `poetry run python --version` | User | ✅ Done | Python 3.13.7 |
 
 ---
 
