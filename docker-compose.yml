@@ -1,0 +1,47 @@
+services:
+  # Development container
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        INSTALL_DEV: "true"
+    volumes:
+      # Mount source code for live reloading
+      - ./src:/app/src:cached
+      - ./tests:/app/tests:cached
+      - ./notebooks:/app/notebooks:cached
+      - ./scripts:/app/scripts:cached
+      - ./data:/app/data:cached
+      - ./models:/app/models:cached
+    environment:
+      - PYTHONPATH=/app/src
+      - PYTHONUNBUFFERED=1
+    # Keep container running for development
+    command: tail -f /dev/null
+    # Uncomment to run API server:
+    # command: uvicorn polyvoice.api.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"  # API
+      - "8888:8888"  # Jupyter
+
+  # Jupyter notebook server (optional, run with: docker-compose up jupyter)
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        INSTALL_DEV: "true"
+    volumes:
+      - ./src:/app/src:cached
+      - ./notebooks:/app/notebooks:cached
+      - ./data:/app/data:cached
+      - ./models:/app/models:cached
+      - ./reports:/app/reports:cached
+    environment:
+      - PYTHONPATH=/app/src
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+    ports:
+      - "8888:8888"
+    profiles:
+      - jupyter
