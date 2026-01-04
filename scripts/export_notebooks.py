@@ -92,7 +92,10 @@ def main() -> int:
             return 1
 
         # Determine output directory based on notebook location
-        if notebooks_dir in notebook_path.parents or notebook_path.parent == notebooks_dir:
+        if (
+            notebooks_dir in notebook_path.parents
+            or notebook_path.parent == notebooks_dir
+        ):
             relative = notebook_path.relative_to(notebooks_dir)
             output_dir = reports_dir / relative.parent
         else:

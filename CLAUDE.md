@@ -65,11 +65,16 @@ Claude handles all git operations with these rules:
 3. **Show status** - before proposing commit, show `git status` and `git diff --stat`
 4. **Never use `--no-verify`** - if pre-commit hooks fail, discuss the issue with user and find a proper fix
 5. **Fix problems, don't bypass them** - all commit/hook issues must be resolved canonically, not worked around
-6. **Update documentation BEFORE committing** - when completing a task group:
+6. **Run checks BEFORE committing** - always run linter and type checker before proposing a commit:
+   - `poetry run ruff check .` - linting
+   - `poetry run ruff format --check .` - formatting
+   - `poetry run mypy src/` - type checking
+   - Fix any issues before showing git status
+7. **Update documentation BEFORE committing** - when completing a task group:
    - First update status in phase document (docs/phases/)
    - Then show git status with ALL changes (code + docs)
    - Then propose commit that includes everything
-7. **Ask if user has questions** - before proposing a commit, ask if user wants to discuss or clarify anything about the completed work. This gives a natural pause for learning and understanding.
+8. **Ask if user has questions** - before proposing a commit, ask if user wants to discuss or clarify anything about the completed work. This gives a natural pause for learning and understanding.
 
 ### Pre-commit Workflow (Windows)
 
