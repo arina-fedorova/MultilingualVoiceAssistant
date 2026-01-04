@@ -662,9 +662,9 @@ If any step fails → PR cannot be merged.
 |---|------|-----|--------|-------|
 | 6.1 | Create `.github/workflows/ci.yml` | Claude | ✅ Done | Lint, test, docker jobs |
 | 6.2 | Create basic tests | Claude | ✅ Done | conftest.py + test_polyvoice.py |
-| 6.3 | Push to GitHub | User | ⏳ Pending | After commit |
-| 6.4 | Verify CI runs | User | ⏳ Pending | Check GitHub Actions tab |
-| 6.5 | Fix any CI failures | Together | ⏳ Pending | Iterate until green |
+| 6.3 | Push to GitHub | User | ✅ Done | Pushed to init branch |
+| 6.4 | Verify CI runs | User | ✅ Done | All jobs passed |
+| 6.5 | Fix any CI failures | Together | ✅ Done | No failures |
 
 ---
 

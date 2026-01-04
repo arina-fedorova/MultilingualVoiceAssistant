@@ -69,6 +69,7 @@ Claude handles all git operations with these rules:
    - First update status in phase document (docs/phases/)
    - Then show git status with ALL changes (code + docs)
    - Then propose commit that includes everything
+7. **Ask if user has questions** - before proposing a commit, ask if user wants to discuss or clarify anything about the completed work. This gives a natural pause for learning and understanding.
 
 ### Pre-commit Workflow (Windows)
 
