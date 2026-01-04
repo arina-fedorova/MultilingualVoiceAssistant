@@ -636,11 +636,11 @@ If any step fails → PR cannot be merged.
 
 | # | Task | Who | Status | Notes |
 |---|------|-----|--------|-------|
-| 4.1 | Create `Dockerfile` | Claude | | Python + Poetry image |
-| 4.2 | Create `docker-compose.yml` | Claude | | Dev environment |
-| 4.3 | Create `.dockerignore` | Claude | | Exclude unnecessary files |
-| 4.4 | Build image | User | | `docker-compose build` |
-| 4.5 | Run container | User | | `docker-compose up` |
+| 4.1 | Create `Dockerfile` | Claude | ✅ Done | Multi-stage build with Poetry |
+| 4.2 | Create `docker-compose.yml` | Claude | ✅ Done | Dev + Jupyter services |
+| 4.3 | Create `.dockerignore` | Claude | ✅ Done | Excludes git, venv, cache, data |
+| 4.4 | Build image | User | ✅ Done | Image built successfully |
+| 4.5 | Run container | User | ✅ Done | PolyVoice v0.1.0 confirmed |
 
 ---
 
