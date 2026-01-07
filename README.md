@@ -1,69 +1,40 @@
-# PolyVoice - Multilingual Voice Assistant
+# MultilingualVoiceAssistant
 
-Multilingual Voice Assistant for learning Romance languages (Spanish, Italian, Portuguese). The system conducts 10-15 minute spoken lessons with voice-only interaction, providing feedback on mistakes and pronunciation.
+Голосовой ассистент для изучения романских языков.
 
-**Companion project to [PolyLadder](https://github.com/arina-fedorova/PolyLadder)** - a web-based parallel language learning platform.
+## О проекте
 
-## Features (Planned)
+Система проводит 10-15 минутные разговорные уроки на испанском, итальянском и португальском. Пользователь говорит — ассистент распознаёт речь, оценивает произношение, даёт обратную связь и ведёт диалог дальше. Взаимодействие только голосом, без текстового ввода.
 
-- **Speech-to-Text (ASR)**: Multi-language speech recognition (ES/IT/PT/EN)
-- **Text-to-Speech (TTS)**: Natural speech synthesis with prosody control
-- **Lesson Orchestrator**: LLM-powered dialog management for structured lessons
-- **Pronunciation Scoring**: Custom ML module for quantified pronunciation feedback
-- **Language ID**: Detect code-switching between similar languages
+Проект связан с [PolyLadder](https://github.com/arina-fedorova/PolyLadder) — веб-платформой для параллельного изучения языков.
 
-## Tech Stack
+## Компоненты
 
-- **Python 3.11+** with Poetry
-- **FastAPI** for API
-- **PyTorch** for ML models
-- **Whisper** for ASR
-- **DVC** for data versioning
-- **Docker** for containerization
+- **ASR** — распознавание речи на нескольких языках (Whisper)
+- **TTS** — синтез речи с контролем просодии
+- **Orchestrator** — LLM для управления диалогом и структурой урока
+- **Pronunciation Scoring** — ML-модуль для оценки произношения
+- **Language ID** — определение языка при переключении между языками
 
-## Project Structure
+## Технологии
 
-```
-├── src/polyvoice/      # Main package
-│   ├── asr/            # Speech-to-Text
-│   ├── tts/            # Text-to-Speech
-│   ├── orchestrator/   # LLM dialog manager
-│   ├── pronunciation/  # Pronunciation scoring
-│   ├── language_id/    # Language identification
-│   ├── api/            # FastAPI endpoints
-│   └── common/         # Shared utilities
-├── notebooks/          # Jupyter notebooks
-├── data/               # Data (DVC managed)
-├── models/             # Trained models (DVC managed)
-├── tests/              # Tests
-└── docs/               # Documentation
-```
+Python 3.11+, Poetry, FastAPI, PyTorch. Версионирование данных через DVC.
 
-## Development
+## Разработка
 
 ```bash
-# Install dependencies
 poetry install
-
-# Run linting
 poetry run ruff check .
-
-# Run type checking
 poetry run mypy src/
-
-# Run tests
 poetry run pytest
-
-# Start Jupyter
-poetry run jupyter lab
 ```
 
-## Status
+## Статус
 
-🚧 **In Development** - Phase 0: Foundation & Infrastructure
+В разработке. Завершена фаза 0 (инфраструктура).
 
-See [docs/ROADMAP.md](docs/ROADMAP.md) for development roadmap.
+## Документация
 
-## License
-
-MIT
+Документация в [PolyLadderCommon/docs/voice-assistant](../PolyLadderCommon/docs/voice-assistant/):
+- [PROJECT_SPECIFICATION.md](../PolyLadderCommon/docs/voice-assistant/PROJECT_SPECIFICATION.md) — спецификация
+- [ROADMAP.md](../PolyLadderCommon/docs/voice-assistant/ROADMAP.md) — план на 6 фаз
